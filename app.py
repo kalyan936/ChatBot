@@ -17,9 +17,10 @@ output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 
 # Streamlit UI
-st.title("Copilot-style Chatbot (LangChain + Ollama)")
+st.title("My-ChatBot")
 user_input = st.text_input("Ask me anything")
 
 if user_input:
     response = chain.invoke({"question": user_input})
     st.write(response)
+
